@@ -24,7 +24,7 @@ Laravel WordPress 8.6 Password Bridge
 
 protected function checkPassword(string $inputPassword, string $storedPassword): bool {
 
-   $check = false;
+      $check = false;
     
     if (str_starts_with($storedPassword, '$wp')) {
         // Check the password using the current prefixed hash.
@@ -36,5 +36,4 @@ protected function checkPassword(string $inputPassword, string $storedPassword):
         $check = $passwordHasher->checkPassword($inputPassword, $storedPassword);
     }
     
-    return $check;
-}
+      return $check;}
